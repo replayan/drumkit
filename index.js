@@ -11,12 +11,26 @@ for (let i = 0; i < numberOfDrumButtons; i++) {
 }
 
 document.addEventListener("keydown", function (event) {
-  const keysArray = ['w', 'W', 'a', 'A', 's', 'S', 'd', 'D', 'j', 'J', 'l', 'L', 'k', 'K'];
-  if(keysArray.includes(event.key)){
+  const keysArray = [
+    "w",
+    "W",
+    "a",
+    "A",
+    "s",
+    "S",
+    "d",
+    "D",
+    "j",
+    "J",
+    "l",
+    "L",
+    "k",
+    "K",
+  ];
+  if (keysArray.includes(event.key)) {
     makeSound(event.key.toLowerCase());
     buttonAnimation(event.key);
   }
-  
 });
 
 function makeSound(key) {
